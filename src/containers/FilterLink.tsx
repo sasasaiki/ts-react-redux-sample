@@ -3,7 +3,7 @@ import { Action, Dispatch } from 'redux';
 
 import { actionCreator, RootState } from '../modules';
 import Link from '../components/Link';
-import { FilterType } from '../modules/visibilityFilter/SetVisibilityFilter';
+import { FilterType } from '../modules/visibilityFilter/FilterAction';
 
 type OwnProps = {
   filter: FilterType;

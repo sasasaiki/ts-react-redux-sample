@@ -3,7 +3,7 @@ import {
   showAll,
   setVisibilityFilter, 
   SetVisibilityFilterAction,
-} from './SetVisibilityFilter';
+} from './FilterAction';
 
 type Actions
   = SetVisibilityFilterAction;

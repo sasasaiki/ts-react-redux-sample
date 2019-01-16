@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import * as Todos from './todos';
-import * as VisibilityFilter from './visibilityFilter';
+import * as Todos from './todos/TodoReducer';
+import * as VisibilityFilter from './visibilityFilter/FilterReducer';
 
 export type RootState = {
   todos: Todos.State;
