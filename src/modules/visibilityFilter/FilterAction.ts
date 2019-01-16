@@ -1,42 +1,19 @@
 import { Action } from 'redux';
 
-type ShowAll = {
-  type: 'SHOW_ALL',
+export const showAll = (): string => {
+  return 'SHOW_ALL'
 };
 
-type ShowCompleted = {
-  type: 'SHOW_COMPLETED',
+export const showCompleted = (): string => {
+  return 'SHOW_COMPLETED'
 };
 
-type ShowActive = {
-  type: 'SHOW_ACTIVE',
-};
-
-export type FilterType
-  = ShowAll
-  | ShowCompleted
-  | ShowActive;
-
-export const showAll = (): FilterType => {
-  return {
-    type: 'SHOW_ALL',
-  };
-};
-
-export const showCompleted = (): FilterType => {
-  return {
-    type: 'SHOW_COMPLETED',
-  };
-};
-
-export const showActive = (): FilterType => {
-  return {
-    type: 'SHOW_ACTIVE',
-  };
+export const showActive = (): string => {
+    return 'SHOW_ACTIVE'
 };
 
 export type SetVisibilityFilterPayload = {    // とりあえずフィルターセットしといて、プレゼンテーション層で見え方の調整する
-  filter: FilterType;
+  filter: string;
 };
 
 export interface SetVisibilityFilterAction extends Action {

@@ -6,7 +6,7 @@ import TodoList from '../components/TodoList';
 
 const mapStateToProps = (state: RootState) => {
   const filter = () => {
-    switch (state.visibilityFilter.visibility.type) {
+    switch (state.visibilityFilter.visibility) {
       case 'SHOW_ALL':
         return state.todos.todos;
       case 'SHOW_COMPLETED':

@@ -1,5 +1,4 @@
 import {
-  FilterType,
   showAll,
   setVisibilityFilter, 
   SetVisibilityFilterAction,
@@ -9,7 +8,7 @@ type Actions
   = SetVisibilityFilterAction;
 
 export type State = {
-  visibility: FilterType,
+  visibility: string,
 };
 
 const init = (): State => {
