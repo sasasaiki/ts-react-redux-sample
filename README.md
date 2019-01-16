@@ -1,3 +1,10 @@
+公式と　https://redux.js.org/basics/reducers
+
+ここを参考に進めてるhttps://qiita.com/IgnorantCoder/items/88f13569cbf0a1c5eaa1
+
+
+=================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
