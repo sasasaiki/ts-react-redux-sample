@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
 import { actionCreator, RootState } from '../../root/RootModule';
-import Link from '../component/Link';
+import Button from '../component/FilterButton';
 
 import { FilterType } from '../module/visibilityFilter/FilterAction';
 
@@ -26,4 +26,4 @@ const mapDispatchToProps = (dispatch: Dispatch<Action>, ownProps: OwnProps) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Link);
+)(Button);

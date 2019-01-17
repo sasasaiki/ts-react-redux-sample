@@ -1,20 +1,20 @@
 import * as React from 'react';
-import FilterLink from '../container/FilterLink';
+import FilterButtonContainer from '../container/FilterButtonContainer';
 import { showAll, showCompleted, showActive} from '../module/visibilityFilter/FilterAction'
 
 const component: React.SFC = () => {
   return (
     <div>
       <span>Show: </span>
-      <FilterLink filter={showAll()}>
+      <FilterButtonContainer filter={showAll()}>
         All
-      </FilterLink>
-      <FilterLink filter={showActive()}>
+      </FilterButtonContainer>
+      <FilterButtonContainer filter={showActive()}>
         Active
-      </FilterLink>
-      <FilterLink filter={showCompleted()}>
+      </FilterButtonContainer>
+      <FilterButtonContainer filter={showCompleted()}>
         Completed
-      </FilterLink>
+      </FilterButtonContainer>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import AddTodo from '../container/AddTodo';
+import AddingArea from '../container/AddingAreaContainer';
 import TodoList from '../container/TodoListContainer';
 import Footer from './Footer';
 
 const component: React.SFC = () => {
   return (
     <div>
-      <AddTodo />
+      <AddingArea />
       <TodoList />
       <Footer />
     </div>
