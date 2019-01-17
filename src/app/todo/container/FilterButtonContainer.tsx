@@ -7,9 +7,12 @@ import Button from '../component/FilterButton';
 import { FilterType } from '../module/filter/FilterAction';
 
 
+// これを第二引数に入れることで親からもらう値を指定しているっぽい
 type OwnProps = {
   filter: FilterType;
 }
+
+// 二つのメソッドの第二引数は一致していないと動かないはず
 
 const mapStateToProps = (state: RootState, ownProps: OwnProps) => {
   return {

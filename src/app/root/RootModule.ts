@@ -7,6 +7,7 @@ export type RootState = {
   visibilityFilter: VisibilityFilter.State;
 };
 
+// reducerで返すものが間違ってたりするとここにエラーが出ることがるので注意
 export const rootReducer = combineReducers({
   todos: Todos.reducer,
   visibilityFilter: VisibilityFilter.reducer,

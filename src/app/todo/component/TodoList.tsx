@@ -1,14 +1,17 @@
 import * as React from 'react';
 import Todo from './Todo';
-import * as Todos from '../module/TodoReducer';
 
-
-class Props {
-    constructor(
-        public todos: Todos.Todo[],
-        public toggleTodo: (id: number) => void) { }
+// こいつらのインスタンスは作らないからclassじゃなくてtypeでいいのか...
+type Props = {
+    todos: TodoData[];
+    toggleTodo: (id: number) => void;
 }
 
+type TodoData = {
+    id: number;
+    text: string;
+    completed: boolean;
+}
 
 const component: React.SFC<Props> = (props: Props) => {
     return (
