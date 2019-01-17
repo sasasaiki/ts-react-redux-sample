@@ -1,17 +1,16 @@
 import { addTodo, AddTodoAction, AddTodoPayload } from './AddTodo';
 import { toggleTodo, ToggleTodoAction } from './ToggleTodo';
 import { TodoActionType } from './TodoActionType';
-import { string } from 'prop-types';
 
 type Actions
     = AddTodoAction
     | ToggleTodoAction;
 
-export class State {    // ページ全体で保持しとくべき情報はTodoの配列くらい
+export class State {    // Todoに関するState。ActionがDispatchされることでReducerによって更新される
     constructor(public todos: Todo[]) { }
 };
 
-class Todo {
+export class Todo {
     constructor(public id: number, public text: string, public completed: boolean) { }
 }
 

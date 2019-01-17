@@ -8,13 +8,13 @@ const component: React.SFC = () => {
       <span>Show: </span>
       <FilterLink filter={showAll()}>
         All
-            </FilterLink>
+      </FilterLink>
       <FilterLink filter={showActive()}>
         Active
-            </FilterLink>
+      </FilterLink>
       <FilterLink filter={showCompleted()}>
         Completed
-            </FilterLink>
+      </FilterLink>
     </div>
   );
 };

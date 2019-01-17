@@ -2,10 +2,14 @@ import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
 import { actionCreator, RootState } from '../modules';
-import TodoList from '../components/TodoList';
+import TodoListComponent from '../components/TodoList';
 
 const mapStateToProps = (state: RootState) => {
-  const filter = () => {
+  return {
+    todos: createTodos()
+  }
+
+  function createTodos(){
     switch (state.visibilityFilter.visibility) {
       case 'SHOW_ALL':
         return state.todos.todos;
@@ -17,9 +21,6 @@ const mapStateToProps = (state: RootState) => {
         throw new Error('Unknown filter.');
     }
   };
-  return {
-    todos: filter()
-  }
 };
 
 const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
@@ -33,4 +34,4 @@ const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList);
+)(TodoListComponent);

@@ -43,7 +43,7 @@ class Component extends React.Component<Props, State> {
           />
           <button type={'submit'}>
             Add Todo
-                    </button>
+          </button>
         </form>
       </div>
     );

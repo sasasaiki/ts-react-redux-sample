@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Todo from './Todo';
+import * as Todos from '../modules/todos/TodoReducer';
 
-type Props = {
-    todos: {
-        id: number;
-        text: string;
-        completed: boolean;
-    }[];
-    toggleTodo: (id: number) => void;
-};
+
+class Props {
+    constructor(
+        public todos: Todos.Todo[],
+        public toggleTodo: (id: number) => void) { }
+}
+
 
 const component: React.SFC<Props> = (props: Props) => {
     return (
