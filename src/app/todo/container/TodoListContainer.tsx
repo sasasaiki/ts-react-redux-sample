@@ -14,9 +14,9 @@ const mapStateToProps = (state: RootState) => {
     switch (state.visibilityFilter.visibility) {
       case FilterType.ALL:
         return state.todos.todos;
-      case FilterType.ACTIVE:
-        return state.todos.todos.filter(e => e.completed);
       case FilterType.COMPLETED:
+        return state.todos.todos.filter(e => e.completed);
+      case FilterType.ACTIVE:
         return state.todos.todos.filter(e => !e.completed);
       default:
         throw new Error('Unknown filter.');
