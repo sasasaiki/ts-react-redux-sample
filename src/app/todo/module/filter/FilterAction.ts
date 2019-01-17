@@ -6,6 +6,10 @@ export enum FilterType{
   ACTIVE,
 }
 
+export enum FilterActionType {
+  FILTER = "FILTER_TODO"
+}
+
 export const showAll = (): FilterType => {
   return FilterType.ALL
 };
@@ -23,7 +27,7 @@ export type SetVisibilityFilterPayload = {    // とりあえずフィルター�
 };
 
 export interface SetVisibilityFilterAction extends Action {
-  type: 'SET_VISIBILITY_FILTER';
+  type: FilterActionType.FILTER;
   payload: SetVisibilityFilterPayload;
 }
 
@@ -31,6 +35,6 @@ export const setVisibilityFilter
   = (payload: SetVisibilityFilterPayload): SetVisibilityFilterAction => {
     return {
       payload,
-      type: 'SET_VISIBILITY_FILTER',
+      type: FilterActionType.FILTER,
     };
   };

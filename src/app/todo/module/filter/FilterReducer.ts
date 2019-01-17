@@ -3,6 +3,7 @@ import {
   setVisibilityFilter, 
   SetVisibilityFilterAction,
   FilterType,
+  FilterActionType,
 } from './FilterAction';
 
 
@@ -21,7 +22,7 @@ const init = (): State => {
 
 export const reducer = (state: State = init(), action: Actions) => {
   switch (action.type) {
-    case 'SET_VISIBILITY_FILTER':
+    case FilterActionType.FILTER:
       return {
         visibility: action.payload.filter,
       };
