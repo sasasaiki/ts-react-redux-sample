@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
 import { actionCreator } from '../../modules';
-import AddTodo from '../../components/AddTodo';
+import AddTodo from '../../components/todo/AddTodo'
 
 const mapStateToProps = () => {
   return {};

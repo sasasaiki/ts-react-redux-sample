@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Todo from './Todo';
-import * as Todos from '../modules/todos/TodoReducer';
+import * as Todos from '../../modules/todos/TodoReducer';
 
 
 class Props {

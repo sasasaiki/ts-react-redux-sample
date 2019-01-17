@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
 import { actionCreator, RootState } from '../../modules';
-import Link from '../../components/Link';
+import Link from '../../components/todo/Link';
 
 type OwnProps = {
   filter: string;

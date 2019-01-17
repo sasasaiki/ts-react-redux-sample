@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
 import { actionCreator, RootState } from '../../modules';
-import TodoListComponent from '../../components/TodoList';
+import TodoListComponent from '../../components/todo/TodoList';
 
 const mapStateToProps = (state: RootState) => {
   return {
