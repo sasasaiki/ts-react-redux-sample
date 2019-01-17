@@ -10,6 +10,7 @@ export enum FilterActionType {
   FILTER = "FILTER_TODO"
 }
 
+// ボタンの初期値を与える時などに使っている。へ〜
 export const showAll = (): FilterType => {
   return FilterType.ALL
 };
@@ -22,17 +23,17 @@ export const showActive = (): FilterType => {
     return FilterType.ACTIVE
 };
 
-export type SetVisibilityFilterPayload = {    // とりあえずフィルターセットしといて、プレゼンテーション層で見え方の調整する
+export type SetFilterPayload = {    // ステートの更新に必要な情報を持たせる。どのフィルタをかけるか。
   filter: FilterType;
 };
 
-export interface SetVisibilityFilterAction extends Action {
+export interface SetFilterAction extends Action {
   type: FilterActionType.FILTER;
-  payload: SetVisibilityFilterPayload;
+  payload: SetFilterPayload;
 }
 
 export const setVisibilityFilter
-  = (payload: SetVisibilityFilterPayload): SetVisibilityFilterAction => {
+  = (payload: SetFilterPayload): SetFilterAction => {
     return {
       payload,
       type: FilterActionType.FILTER,

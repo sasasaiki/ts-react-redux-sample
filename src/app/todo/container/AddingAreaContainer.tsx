@@ -11,7 +11,7 @@ const mapStateToProps = () => {
 const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
   return {
     onSubmit: (text: string) => {
-      dispatch(actionCreator.todos.addTodo({ text }));
+      dispatch(actionCreator.todo.addTodo({ text }));
     }
   }
 };

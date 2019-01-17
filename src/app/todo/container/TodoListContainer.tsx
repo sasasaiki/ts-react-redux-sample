@@ -11,13 +11,13 @@ const mapStateToProps = (state: RootState) => {
   }
 
   function createTodos(){
-    switch (state.visibilityFilter.visibility) {
+    switch (state.filter.visibility) {
       case FilterType.ALL:
-        return state.todos.todos;//今回はそのままだがComponentで必要な型に変換するかもしれない？
+        return state.todo.todos;//今回はそのままだがComponentで必要な型に変換するかもしれない？
       case FilterType.COMPLETED:
-        return state.todos.todos.filter(e => e.completed);
+        return state.todo.todos.filter(e => e.completed);
       case FilterType.ACTIVE:
-        return state.todos.todos.filter(e => !e.completed);
+        return state.todo.todos.filter(e => !e.completed);
       default:
         throw new Error('Unknown filter.');
     }
@@ -27,7 +27,7 @@ const mapStateToProps = (state: RootState) => {
 const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
   return {
     toggleTodo: (id: number) => {
-      dispatch(actionCreator.todos.toggleTodo({ id: id }));
+      dispatch(actionCreator.todo.toggleTodo({ id: id }));
     }
   }
 };

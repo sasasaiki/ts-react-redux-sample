@@ -1,14 +1,14 @@
 import {
   showAll,
   setVisibilityFilter, 
-  SetVisibilityFilterAction,
+  SetFilterAction,
   FilterType,
   FilterActionType,
 } from './FilterAction';
 
 
 type Actions
-  = SetVisibilityFilterAction;
+  = SetFilterAction;
 
 export type State = {
   visibility: FilterType,
