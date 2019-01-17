@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
-import { actionCreator } from '../../modules';
-import AddTodo from '../../components/todo/AddTodo'
+import { actionCreator } from '../../root/RootModule';
+import AddTodo from '../component/AddTodo'
 
 const mapStateToProps = () => {
   return {};

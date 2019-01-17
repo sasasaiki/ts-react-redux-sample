@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
-import { actionCreator, RootState } from '../../modules';
-import Link from '../../components/todo/Link';
+import { actionCreator, RootState } from '../../root/RootModule';
+import Link from '../component/Link';
 
-import {FilterType,
-} from '../../modules/todo/visibilityFilter/FilterAction';
+import { FilterType } from '../module/visibilityFilter/FilterAction';
+
 
 type OwnProps = {
   filter: FilterType;

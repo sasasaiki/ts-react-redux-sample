@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
-import { actionCreator, RootState } from '../../modules';
-import TodoListComponent from '../../components/todo/TodoList';
-import { FilterType } from '../../modules/todo/visibilityFilter/FilterAction';
+import { actionCreator, RootState } from '../../root/RootModule';
+import TodoListComponent from '../component/TodoList';
+import { FilterType } from '../module/visibilityFilter/FilterAction';
 
 const mapStateToProps = (state: RootState) => {
   return {
