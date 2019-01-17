@@ -2,13 +2,15 @@ import {
   showAll,
   setVisibilityFilter, 
   SetVisibilityFilterAction,
+  FilterType,
 } from './FilterAction';
+
 
 type Actions
   = SetVisibilityFilterAction;
 
 export type State = {
-  visibility: string,
+  visibility: FilterType,
 };
 
 const init = (): State => {

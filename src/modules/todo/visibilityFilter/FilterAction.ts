@@ -1,19 +1,25 @@
 import { Action } from 'redux';
 
-export const showAll = (): string => {
-  return 'SHOW_ALL'
+export enum FilterType{
+  ALL,
+  COMPLETED,
+  ACTIVE,
+}
+
+export const showAll = (): FilterType => {
+  return FilterType.ALL
 };
 
-export const showCompleted = (): string => {
-  return 'SHOW_COMPLETED'
+export const showCompleted = (): FilterType => {
+  return FilterType.COMPLETED
 };
 
-export const showActive = (): string => {
-    return 'SHOW_ACTIVE'
+export const showActive = (): FilterType => {
+    return FilterType.ACTIVE
 };
 
 export type SetVisibilityFilterPayload = {    // とりあえずフィルターセットしといて、プレゼンテーション層で見え方の調整する
-  filter: string;
+  filter: FilterType;
 };
 
 export interface SetVisibilityFilterAction extends Action {

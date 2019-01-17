@@ -4,8 +4,11 @@ import { Action, Dispatch } from 'redux';
 import { actionCreator, RootState } from '../../modules';
 import Link from '../../components/todo/Link';
 
+import {FilterType,
+} from '../../modules/todo/visibilityFilter/FilterAction';
+
 type OwnProps = {
-  filter: string;
+  filter: FilterType;
 }
 
 const mapStateToProps = (state: RootState, ownProps: OwnProps) => {

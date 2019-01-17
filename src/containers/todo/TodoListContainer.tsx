@@ -3,6 +3,7 @@ import { Action, Dispatch } from 'redux';
 
 import { actionCreator, RootState } from '../../modules';
 import TodoListComponent from '../../components/todo/TodoList';
+import { FilterType } from '../../modules/todo/visibilityFilter/FilterAction';
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -11,11 +12,11 @@ const mapStateToProps = (state: RootState) => {
 
   function createTodos(){
     switch (state.visibilityFilter.visibility) {
-      case 'SHOW_ALL':
+      case FilterType.ALL:
         return state.todos.todos;
-      case 'SHOW_COMPLETED':
+      case FilterType.ACTIVE:
         return state.todos.todos.filter(e => e.completed);
-      case 'SHOW_ACTIVE':
+      case FilterType.COMPLETED:
         return state.todos.todos.filter(e => !e.completed);
       default:
         throw new Error('Unknown filter.');
