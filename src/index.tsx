@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './todo/component/App';
-import { rootReducer } from './root/RootModule';
+import App from './app/todo/component/App';
+import { rootReducer } from './app/root/RootModule';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
