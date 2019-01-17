@@ -4,7 +4,7 @@ import { Action, Dispatch } from 'redux';
 import { actionCreator, RootState } from '../../root/RootModule';
 import Button from '../component/FilterButton';
 
-import { FilterType } from '../module/visibilityFilter/FilterAction';
+import { FilterType } from '../module/filter/FilterAction';
 
 
 type OwnProps = {

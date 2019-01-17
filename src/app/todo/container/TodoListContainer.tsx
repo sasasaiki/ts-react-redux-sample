@@ -3,7 +3,7 @@ import { Action, Dispatch } from 'redux';
 
 import { actionCreator, RootState } from '../../root/RootModule';
 import TodoListComponent from '../component/TodoList';
-import { FilterType } from '../module/visibilityFilter/FilterAction';
+import { FilterType } from '../module/filter/FilterAction';
 
 const mapStateToProps = (state: RootState) => {
   return {

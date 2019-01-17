@@ -1,6 +1,6 @@
 import * as React from 'react';
 import FilterButtonContainer from '../container/FilterButtonContainer';
-import { showAll, showCompleted, showActive} from '../module/visibilityFilter/FilterAction'
+import { showAll, showCompleted, showActive} from '../module/filter/FilterAction'
 
 const component: React.SFC = () => {
   return (
