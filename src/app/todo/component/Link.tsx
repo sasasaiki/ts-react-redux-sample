@@ -15,7 +15,7 @@ const component: React.SFC<Props> = (props: Props) => {
         marginLeft: '4px',
       }}
     >
-      {props.children}
+      {props.children}{/* 親のタグに入れられた文字列が取れる */}
     </button>
   );
 };

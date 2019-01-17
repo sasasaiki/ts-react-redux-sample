@@ -1,6 +1,5 @@
 import * as React from 'react';
 import FilterLink from '../container/FilterLink';
-// import { showAll, showCompleted, showActive} from '../modules/visibilityFilter/FilterAction'
 import { showAll, showCompleted, showActive} from '../module/visibilityFilter/FilterAction'
 
 const component: React.SFC = () => {
