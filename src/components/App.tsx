@@ -1,6 +1,6 @@
 import * as React from 'react';
-import AddTodo from '../containers/AddTodo';
-import TodoList from '../containers/TodoListContainer';
+import AddTodo from '../containers/todo/AddTodo';
+import TodoList from '../containers/todo/TodoListContainer';
 import Footer from './Footer';
 
 const component: React.SFC = () => {
