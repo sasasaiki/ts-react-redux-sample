@@ -1,6 +1,6 @@
 import * as React from 'react';
 import FilterLink from '../../containers/todo/FilterLink';
-import { showAll, showCompleted, showActive } from '../../modules/visibilityFilter/FilterAction';
+import { showAll, showCompleted, showActive} from '../../modules/todo/visibilityFilter/FilterAction'
 
 const component: React.SFC = () => {
   return (
