@@ -1,10 +1,8 @@
 import {
-  showAll,
   setVisibilityFilter, 
   SetFilterAction,
-  FilterType,
-  FilterActionType,
 } from '../action/FilterAction';
+import { FilterActionType, FilterType, showAll } from '../constant/FilterActionConstant';
 
 
 type Actions

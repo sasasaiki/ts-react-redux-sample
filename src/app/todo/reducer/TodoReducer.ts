@@ -1,6 +1,6 @@
 import { addTodo, AddTodoAction, AddTodoPayload } from '../action/AddTodoAction';
 import { toggleTodo, ToggleTodoAction, ToggleTodoPayload } from '../action/ToggleTodoAction';
-import { TodoActionType } from '../constant/TodoActionType';
+import { TodoActionType } from '../constant/TodoActionConstant';
 
 type Actions
     = AddTodoAction
