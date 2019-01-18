@@ -1,6 +1,6 @@
-import { addTodo, AddTodoAction, AddTodoPayload } from './AddTodoAction';
-import { toggleTodo, ToggleTodoAction, ToggleTodoPayload } from './ToggleTodoAction';
-import { TodoActionType } from './TodoActionType';
+import { addTodo, AddTodoAction, AddTodoPayload } from '../action/AddTodoAction';
+import { toggleTodo, ToggleTodoAction, ToggleTodoPayload } from '../action/ToggleTodoAction';
+import { TodoActionType } from '../constant/TodoActionType';
 
 type Actions
     = AddTodoAction

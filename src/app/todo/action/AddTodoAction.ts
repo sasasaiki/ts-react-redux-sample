@@ -1,5 +1,5 @@
 import { Action } from 'redux';
-import { TodoActionType } from './TodoActionType';
+import { TodoActionType } from '../constant/TodoActionType';
 
 export type AddTodoPayload = {    // State更新に必要な情報.(todoを追加する時に必要な情報。今回はテキスト)
     text: string;

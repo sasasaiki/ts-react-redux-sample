@@ -4,7 +4,7 @@ import { Action, Dispatch } from 'redux';
 import { actionCreator, RootState } from '../../root/RootModule';
 import Button from '../component/FilterButton';
 
-import { FilterType } from '../module/filter/FilterAction';
+import { FilterType } from '../action/FilterAction';
 
 
 // これを第二引数に入れることで親からもらう値を指定しているっぽい

@@ -1,5 +1,5 @@
 import { Action } from 'redux';
-import { TodoActionType } from './TodoActionType';
+import { TodoActionType } from '../constant/TodoActionType';
 
 export type ToggleTodoPayload = {    // todoをトグルする時に必要なのはどのtodoかの情報くらい
     id: number;

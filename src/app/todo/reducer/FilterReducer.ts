@@ -4,7 +4,7 @@ import {
   SetFilterAction,
   FilterType,
   FilterActionType,
-} from './FilterAction';
+} from '../action/FilterAction';
 
 
 type Actions
