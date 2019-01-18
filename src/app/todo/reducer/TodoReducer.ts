@@ -18,6 +18,7 @@ const init = (): State => {
     return new State([])
 };
 
+// 初回起動時init()の中身で生成される。以降は、ActionがDispatchされたタイミング(自分と関係ないActionだったとしても)で今のステートとDispatchされたActionが流れてくる。
 export const reducer = (state: State = init(), action: Actions) => {
     switch (action.type) {
         // ここでなぜかスマートキャストみたいなことが起きる。すごい。のでAddTodoPayloadに明示的に変換しなくて良い。

@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 import { TodoActionType } from '../constant/TodoActionConstant';
 
-export type ToggleTodoPayload = {    // todoをトグルする時に必要なのはどのtodoかの情報くらい
+export type ToggleTodoPayload = {    // Todoの状態更新。今回は終わってるかどうかだけなのでidがあれば良い。idが一致したらフラグを反転させる。
     id: number;
 };
 
