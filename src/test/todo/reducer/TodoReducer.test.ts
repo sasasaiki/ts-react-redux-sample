@@ -7,7 +7,7 @@ class TodoOfReducer {
     constructor(public id: number, public text: string, public completed: boolean) { }
 }
 
-describe('todo reducer', () => {
+describe('TodoReducer', () => {
   it('初期化ステートが生成されること', () => {
     let resultState = reducer(undefined, Object())
     let expectState = new State([])

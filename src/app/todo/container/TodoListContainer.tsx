@@ -6,7 +6,8 @@ import TodoListComponent from '../component/TodoList';
 import { FilterType } from '../constant/FilterActionConstant';
 
 // ここはStateが更新されるたびに呼ばれる
-const mapStateToProps = (state: RootState) => {
+// Testのためにexport
+export const mapStateToProps = (state: RootState) => {
   return {
     todos: createTodos()
   }
@@ -27,7 +28,8 @@ const mapStateToProps = (state: RootState) => {
 
 // ここは初回のみ呼ばれる（ぽい）
 // componentで何か（クリックとか）した時にdispatchできるようにPropに渡してやる
-const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
+// Testのためにexport
+export const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
   return {
     toggleTodo: (id: number) => {
       dispatch(actionCreator.todo.toggleTodo({ id: id }));

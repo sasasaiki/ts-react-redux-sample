@@ -3,7 +3,7 @@ import { FilterType } from '../../../app/todo/constant/FilterActionConstant'//de
 import { setFilter } from '../../../app/todo/action/FilterAction';
 
 
-describe('todo reducer', () => {
+describe('FilterReducer', () => {
   it('初期化ステートが生成されること', () => {
     let resultState = reducer(undefined, Object())
     let expectState = new State(FilterType.ALL)
