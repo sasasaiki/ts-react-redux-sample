@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Action, Dispatch } from 'redux';
 
 import { actionCreator } from '../../root/RootModule';
-import AddTodo from '../component/AddingArea'
+import AddingArea from '../component/AddingArea'
 
 const mapStateToProps = () => {
   return {};
@@ -24,4 +24,4 @@ const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AddTodo);
+)(AddingArea);

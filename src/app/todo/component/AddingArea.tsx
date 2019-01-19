@@ -5,7 +5,7 @@ type Props = {
 };
 
 type State = {
-  value: string;    // Inputの中身を保持するためにStateを持つことにする。もちろんReduxに逃がしても良い。
+  value: string;    // TODO:Inputの中身を保持するためにStateを持つらしい。ReduxならStoreに持たせなければいけないような気がするがどうなんだ。
 };
 
 class Component extends React.Component<Props, State> {
@@ -17,14 +17,13 @@ class Component extends React.Component<Props, State> {
   }
 
   handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    event.preventDefault();
     this.setState({
       value: event.target.value,
     });
   }
 
   handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+    event.preventDefault();// 普通にsubmitすると再読み込みされてしまうのでそれを止める。お作法。
     const text = this.state.value.trim();
     if (text === '') {
       return;
