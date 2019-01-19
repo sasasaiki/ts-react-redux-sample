@@ -1,6 +1,8 @@
-始め方
+## 始め方
 以下などを参考にhomebrewとnodeを入れる。頑張って。
+
 npmコマンドが使えればOK
+
 https://www.hirooooo-lab.com/entry/development/install-node
 
 以下コマンドどうぞ
