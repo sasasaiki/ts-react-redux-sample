@@ -11,7 +11,7 @@ const mapStateToProps = (state: RootState) => {
   }
 
   function createTodos(){
-    switch (state.filter.visibility) {
+    switch (state.filter.filterType) {
       case FilterType.ALL:
         return state.todo.todos;//今回はそのままだがComponentで必要な型に変換するかもしれない？
       case FilterType.COMPLETED:

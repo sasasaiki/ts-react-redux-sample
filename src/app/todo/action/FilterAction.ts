@@ -12,7 +12,7 @@ export interface SetFilterAction extends Action {
   payload: SetFilterPayload;
 }
 
-export const setVisibilityFilter
+export const setFilter
   = (payload: SetFilterPayload): SetFilterAction => {
     return {
       payload,

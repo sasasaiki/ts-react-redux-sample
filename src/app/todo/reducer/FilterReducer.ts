@@ -1,5 +1,5 @@
 import {
-  setVisibilityFilter,
+  setFilter,
   SetFilterAction,
 } from '../action/FilterAction';
 import { FilterActionType, FilterType, showAll } from '../constant/FilterActionConstant';
@@ -9,7 +9,7 @@ type Actions
   = SetFilterAction;
 
 export class State {
-  constructor(public visibility: FilterType) { }
+  constructor(public filterType: FilterType) { }
 };
 
 const init = (): State => {
@@ -28,5 +28,5 @@ export const reducer = (state: State = init(), action: Actions) => {
 };
 
 export const actionCreator = {
-  setVisibilityFilter,
+  setFilter: setFilter,
 };

@@ -16,13 +16,13 @@ type OwnProps = {
 
 const mapStateToProps = (state: RootState, ownProps: OwnProps) => {
   return {
-    active: ownProps.filter === state.filter.visibility,
+    active: ownProps.filter === state.filter.filterType,
   };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch<Action>, ownProps: OwnProps) => {
   return {
-    onClick: () => { dispatch(actionCreator.filter.setVisibilityFilter({ filter: ownProps.filter, })) },
+    onClick: () => { dispatch(actionCreator.filter.setFilter({ filter: ownProps.filter, })) },
   };
 };
 

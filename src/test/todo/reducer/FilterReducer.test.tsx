@@ -1,6 +1,6 @@
 import { reducer, State } from '../../../app/todo/reducer/FilterReducer'//defaultExportじゃない時は{}で囲むんだってさ
 import { FilterType } from '../../../app/todo/constant/FilterActionConstant'//defaultExportじゃない時は{}で囲むんだってさ
-import { setVisibilityFilter } from '../../../app/todo/action/FilterAction';
+import { setFilter } from '../../../app/todo/action/FilterAction';
 
 
 describe('todo reducer', () => {
@@ -11,7 +11,7 @@ describe('todo reducer', () => {
   });
 
   it('filterTypeがセットできること', () => {
-    let resultState = reducer(undefined, setVisibilityFilter({ filter: FilterType.ACTIVE }))
+    let resultState = reducer(undefined, setFilter({ filter: FilterType.ACTIVE }))
     let expectState = new State(FilterType.ACTIVE)
     expect(resultState).toEqual(expectState);
   });
