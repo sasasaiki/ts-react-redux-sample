@@ -18,7 +18,8 @@ const init = (): State => {
     return new State([])
 };
 
-// 初回起動時init()の中身で生成される。以降は、ActionがDispatchされたタイミング(自分と関係ないActionだったとしても)で今のステートとDispatchされたActionが流れてくる。
+// 初回起動時init()の中身で生成される。
+// 以降は、ActionがDispatchされたタイミング(自分と関係ないActionだったとしても)で今のステートとDispatchされたActionが流れてくる。
 export const reducer = (state: State = init(), action: Actions) => {
     switch (action.type) {
         // ここでなぜかスマートキャストみたいなことが起きる。すごい。のでAddTodoPayloadに明示的に変換しなくて良い。
@@ -35,23 +36,18 @@ function createAddedState(prev: State, payload: AddTodoPayload): State {
     let newItem = new Todo(
         prev.todos.length,
         payload.text)
-    return new State(prev.todos.concat(newItem))//prevのStateの値を更新するのはご法度なので注意
+    return new State(prev.todos.concat(newItem))//prevのStateの値を更新するのはご法度なので注意。しっかりnewする。
 }
 
 function createToggledState(prev: State, payload: ToggleTodoPayload): State {
     return new State(
         prev.todos.map((todo) => {
-            return toggleTodoIfNeed(payload.id, todo)
+            if (todo.id == payload.id) {
+                todo.completed = !todo.completed
+            }
+            return todo
         })
     )
-}
-
-function toggleTodoIfNeed(id: number, todo: Todo): Todo {
-    if (todo.id != id) {
-        return todo
-    }
-    todo.completed = !todo.completed
-    return todo
 }
 
 export const actionCreator = {

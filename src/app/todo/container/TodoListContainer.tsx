@@ -5,6 +5,7 @@ import { actionCreator, RootState } from '../../root/RootModule';
 import TodoListComponent from '../component/TodoList';
 import { FilterType } from '../constant/FilterActionConstant';
 
+// ここはStateが更新されるたびに呼ばれる
 const mapStateToProps = (state: RootState) => {
   return {
     todos: createTodos()
@@ -24,6 +25,8 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
+// ここは初回のみ呼ばれる（ぽい）
+// componentで何か（クリックとか）した時にdispatchできるようにPropに渡してやる
 const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
   return {
     toggleTodo: (id: number) => {
@@ -32,6 +35,12 @@ const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
   }
 };
 
+
+//ここでAddTodoのPropに何を詰めるか宣言する
+//二つのメソッドの返り値が合わさってPropが持つのと同じ要素を全て埋めなければコンパイルが通らない
+//多い分には問題ないらしい（意味ないけど）
+//今回はStateから何も使わないので空を返すメソッドにっている
+//DispatchToPropsは省略できる
 export default connect(
   mapStateToProps,
   mapDispatchToProps
