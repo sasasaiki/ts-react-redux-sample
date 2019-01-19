@@ -1,5 +1,5 @@
 import {
-  setVisibilityFilter, 
+  setVisibilityFilter,
   SetFilterAction,
 } from '../action/FilterAction';
 import { FilterActionType, FilterType, showAll } from '../constant/FilterActionConstant';
@@ -8,22 +8,20 @@ import { FilterActionType, FilterType, showAll } from '../constant/FilterActionC
 type Actions
   = SetFilterAction;
 
-export type State = {
-  visibility: FilterType,
+export class State {
+  constructor(public visibility: FilterType) { }
 };
 
 const init = (): State => {
-  return {
-    visibility: showAll(),
-  };
+  return new State(showAll());
 };
 
 export const reducer = (state: State = init(), action: Actions) => {
   switch (action.type) {
     case FilterActionType.FILTER:
-      return {
-        visibility: action.payload.filter,
-      };
+      return new State(
+        action.payload.filter
+      );
     default:
       return state;
   }

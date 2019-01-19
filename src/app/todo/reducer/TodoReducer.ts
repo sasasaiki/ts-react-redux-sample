@@ -10,7 +10,8 @@ export class State {    // Todoに関するState。ActionがDispatchされるこ
     constructor(public todos: Todo[]) { }
 };
 
-class Todo {
+// VisibleForTesting （ダサいけどゆるして）
+export class Todo {
     constructor(public id: number, public text: string, public completed: boolean) { }
 }
 

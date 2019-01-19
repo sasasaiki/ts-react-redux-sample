@@ -5,6 +5,7 @@ export type AddTodoPayload = {    // State更新に必要な情報.(todoを追�
     text: string;
 };
 
+// こいつをクラスにすると怒られる
 export interface AddTodoAction extends Action {
     type: TodoActionType.ADD;
     payload: AddTodoPayload;

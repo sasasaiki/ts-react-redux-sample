@@ -6,6 +6,7 @@ export type SetFilterPayload = {    // ステートの更新に必要な情報�
   filter: FilterType;
 };
 
+// こいつをクラスにすると怒られる
 export interface SetFilterAction extends Action {
   type: FilterActionType.FILTER;
   payload: SetFilterPayload;
