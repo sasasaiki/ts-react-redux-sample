@@ -10,9 +10,8 @@ export class State {    // Todoに関するState。ActionがDispatchされるこ
     constructor(public todos: Todo[]) { }
 };
 
-// VisibleForTesting （ダサいけどゆるして）
-export class Todo {
-    constructor(public id: number, public text: string, public completed: boolean) { }
+class Todo {
+    constructor(public id: number, public text: string, public completed: boolean = false) { }
 }
 
 const init = (): State => {
@@ -35,8 +34,7 @@ export const reducer = (state: State = init(), action: Actions) => {
 function createAddedState(prev: State, payload: AddTodoPayload): State {
     let newItem = new Todo(
         prev.todos.length,
-        payload.text,
-        false)
+        payload.text)
     return new State(prev.todos.concat(newItem))//prevのStateの値を更新するのはご法度なので注意
 }
 
