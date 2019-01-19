@@ -1,6 +1,31 @@
-公式と　https://redux.js.org/basics/reducers
+始め方
+以下などを参考にhomebrewとnodeを入れる。頑張って。
+npmコマンドが使えればOK
+https://www.hirooooo-lab.com/entry/development/install-node
 
-ここを参考に進めてるhttps://qiita.com/IgnorantCoder/items/88f13569cbf0a1c5eaa1
+以下コマンドどうぞ
+```
+// cloneする
+git clone https://github.com/sasasaiki/ts-react-redux-sample.git
+
+// 移動する
+cd ts-react-redux-sample
+
+// 必要なパッケージインストール
+npm install
+
+// 動かしてみる
+npm start
+
+// コードに手を加えたりすると勝手にビルドされてリロードされる
+// ctrl + cで終了
+
+// テスト
+npm test
+
+```
+
+以上。
 
 
 =================
