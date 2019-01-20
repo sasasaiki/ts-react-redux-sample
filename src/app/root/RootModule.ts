@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import * as Todos from '../todo/reducer/TodoReducer';
+import { History } from 'history'
 import * as Filter from '../todo/reducer/FilterReducer';
+import { connectRouter } from 'connected-react-router'
 
 export type RootState = {
   todo: Todos.State;
@@ -8,7 +10,8 @@ export type RootState = {
 };
 
 // reducerで返すものが間違ってたりするとここにエラーが出ることがるので注意
-export const rootReducer = combineReducers({
+export const rootReducer = (history:History) => combineReducers({
+  router: connectRouter(history),
   todo: Todos.reducer,
   filter: Filter.reducer,
 });
