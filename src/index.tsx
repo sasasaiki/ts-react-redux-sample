@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import TodoApp from './app/todo/component/App';
-import { rootReducer } from './app/root/RootModule';
+import Top from './app/top/component/Index';
 import configureStore, { history } from './app/root/ConfigureStore';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { Switch, Route } from 'react-router';
 
@@ -17,7 +16,7 @@ ReactDOM.render(
         <ConnectedRouter history={history}>
             <Switch>
                 <Route exact path="/todo" component={TodoApp} />
-                <Route render={() => (<div>デメニギスへようこそ！！urlに/todoつければTodoリストに飛べるようにしたよ。</div>)} />
+                <Route component={Top} />
             </Switch>
         </ConnectedRouter>
     </Provider>,
